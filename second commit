@@ -1,0 +1,23 @@
+In the resit folder, create a Python program that prompts the user to enter the amount of loan in £s. The amount is to be repaid over 24 months with no interst; this program should display the monthly display the monthly repayments necesssary to pay off the laon. this program deal with invalid input values in some sensible way.
+
+def get_loan_amount ():
+       while true:
+            try:
+                amount = float(input(''enter the amount of loan in £''))
+                if amount <= 0:
+                   print(''Please enter a positive number greater than zero.'')
+                else:
+                     return amount
+            except ValueError:
+            Print(''Invalid input. Please enter a numeric value.'')
+
+def calculate_monthly_repayment(amount):
+     return round(amount / 24, 2):
+
+def main():
+loan_amount = get_loan_amount():
+monthly_payment = calculate_monthly_repayment(loan_amount)
+print{f''to repay £{loan_amount:.2f} over 24 months you need to pay £{monthly_payment:.2f}per month.''}
+
+if __name__ == ''__main__'':
+main()
